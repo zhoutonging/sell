@@ -36,4 +36,28 @@ public interface OrderService {
      * @return
      */
     Page<OrderDto> findList(String buyerOpenid, Pageable pageable);
+
+    /**
+     * 取消订单
+     *
+     * @param orderDto
+     * @return
+     */
+    OrderDto canceel(OrderDto orderDto);
+
+    /**
+     * 完结订单
+     *
+     * @param orderDto
+     * @return
+     */
+    OrderDto finish(OrderDto orderDto);
+
+    /**
+     * 支付订单
+     *
+     * @param orderDto
+     * @return
+     */
+    OrderDto paid(OrderDto orderDto);
 }
